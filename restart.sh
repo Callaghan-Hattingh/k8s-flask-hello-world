@@ -17,3 +17,9 @@ helm repo update
 helm install monitoring kube-prometheus-stack
 
 helm show values prometheus-community/kube-prometheus-stack > values.yaml
+
+helm install flask-hello-world flask-helm
+
+# keycloak
+minikube addons list
+minikube addons enable ingress
