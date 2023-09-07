@@ -17,3 +17,6 @@ helm repo update
 helm install monitoring kube-prometheus-stack
 
 helm show values prometheus-community/kube-prometheus-stack > values.yaml
+
+#helm upgrade --install traefik traefik/traefik --reuse-values
+
