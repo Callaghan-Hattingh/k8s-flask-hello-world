@@ -3,7 +3,7 @@
 Setup & config env 
 
 ```shell
-minikube delete
+minikube delete --all
 minikube start
 
 kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.9/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml
