@@ -3,10 +3,11 @@ kind: Ingress
 metadata:
   name: whoamiv2-ingress
 spec:
+  ingressClassName: traefik
   rules:
   - http:
       paths:
-      - path: /2
+      - path: /v2
         pathType: Prefix
         backend:
           service:
