@@ -7,6 +7,7 @@ manifests:
     - metallb.yaml
     - keycloak/keycloak-ingress.yaml
     - keycloak/keycloak.yaml
+    - keycloak/keycloak-service.yaml
     - whoami/whoami-ingress.yaml
     - whoami/whoami-service.yaml
     - whoami/whoami.yaml
