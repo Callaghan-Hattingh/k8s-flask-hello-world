@@ -28,13 +28,10 @@ spec:
               value: "admin"
             - name: KC_PROXY
               value: "edge"
-#            - name: KC_HTTP_RELATIVE_PATH
-#              value: "keycloak"
+            - name: KC_HTTP_RELATIVE_PATH
+              value: "/keycloak"
 #            - name: KC_HOSTNAME_PATH
 #              value: "keycloak"
-#          ports:
-#            - name: web
-#              containerPort: 8080
 #          readinessProbe:
 #            httpGet:
 #              path: /keycloak/health/ready
