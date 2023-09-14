@@ -1,0 +1,15 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: k-s
+manifests:
+  rawYaml:
+    - metallb.yaml
+    - keycloak/keycloak-ingress.yaml
+    - keycloak/keycloak.yaml
+    - whoami/whoami-ingress.yaml
+    - whoami/whoami-service.yaml
+    - whoami/whoami.yaml
+    - whoami2/whoami-ingress2.yaml
+    - whoami2/whoami-service2.yaml
+    - whoami2/whoami2.yaml
