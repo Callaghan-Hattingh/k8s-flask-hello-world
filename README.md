@@ -25,9 +25,6 @@ kubectl apply -f whoami2/whoami-ingress2.yaml
 ```shell
 minikube delete --all;
 minikube start;
-```
-
-```shell
 helm repo add metallb https://metallb.github.io/metallb
 helm repo update
 helm upgrade --install metallb metallb/metallb --create-namespace --namespace metallb-system --wait

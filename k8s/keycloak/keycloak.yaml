@@ -30,53 +30,22 @@ spec:
               value: "edge"
             - name: KC_HTTP_RELATIVE_PATH
               value: "/keycloak"
-#            - name: KC_HOSTNAME_PATH
-#              value: "keycloak"
-#          readinessProbe:
-#            httpGet:
-#              path: /keycloak/health/ready
-#              port: 8080
-#            initialDelaySeconds: 30
-#            periodSeconds: 10
-#            timeoutSeconds: 1
-#            failureThreshold: 20
-#          startupProbe:
-#            httpGet:
-#              path: /keycloak/health/ready
-#              port: 8080
-#            initialDelaySeconds: 30
-#            periodSeconds: 10
-#            timeoutSeconds: 1
-#            failureThreshold: 20
-#          livenessProbe:
-#            httpGet:
-#              path: /keycloak/health/ready
-#              port: 8080
-#            initialDelaySeconds: 30
-#            periodSeconds: 10
-#            timeoutSeconds: 1
-#            failureThreshold: 20
-#          readinessProbe:
-#            httpGet:
-#              path: /health/ready
-#              port: 8080
-#            initialDelaySeconds: 30
-#            periodSeconds: 10
-#            timeoutSeconds: 1
-#            failureThreshold: 2
-#          startupProbe:
-#            httpGet:
-#              path: /health/ready
-#              port: 8080
-#            initialDelaySeconds: 30
-#            periodSeconds: 10
-#            timeoutSeconds: 1
-#            failureThreshold: 2
-#          livenessProbe:
-#            httpGet:
-#              path: /health/ready
-#              port: 8080
-#            initialDelaySeconds: 30
-#            periodSeconds: 10
-#            timeoutSeconds: 1
-#            failureThreshold: 2
+            - name: KC_HEALTH_ENABLED
+              value: "true"
+          readinessProbe:
+            httpGet:
+              path: /keycloak/health/ready
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 1
+            failureThreshold: 20
+          livenessProbe:
+            httpGet:
+              path: /keycloak/health/live
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 1
+            failureThreshold: 20
+
