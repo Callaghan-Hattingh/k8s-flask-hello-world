@@ -13,8 +13,8 @@ minikube start;
 helm repo add metallb https://metallb.github.io/metallb
 helm repo add traefik https://traefik.github.io/charts
 helm repo update
-helm upgrade --install metallb metallb/metallb --create-namespace --namespace metallb-system --wait
-helm upgrade --install traefik traefik/traefik
+helm upgrade --install metallb metallb/metallb --create-namespace --namespace metallb-system --wait --version 0.13.11
+helm upgrade --install traefik traefik/traefik --version 24.0.0
 ```
 ```shell
 cd k8s
