@@ -2,6 +2,20 @@ apiVersion: skaffold/v4beta6
 kind: Config
 metadata:
   name: k-s
+build:
+  artifacts:
+    - image: flask-hello-world
+      context: flask-helm/app
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+      - name: flask-hello-world
+        chartPath: flask-helm
+        valuesFiles:
+          - flask-helm/values.yaml
+        version: 0.1.0
 manifests:
   rawYaml:
     - metallb.yaml
