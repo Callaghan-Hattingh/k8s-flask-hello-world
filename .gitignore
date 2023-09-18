@@ -1,1 +1,4 @@
 .idea
+
+keycloak-operator/certificate.pem
+keycloak-operator/key.pem
