@@ -18,7 +18,7 @@ spec:
       owner: app
       secret:
         name: cluster-example-app-user
-  instances: 3
+  instances: 2
   # Example of rolling update strategy:
   # - unsupervised: automated update of the primary once all
   #                 replicas have been upgraded (default)

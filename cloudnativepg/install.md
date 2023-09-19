@@ -1,6 +1,7 @@
 ```shell
 minikube delete --all;
 minikube start;
+#minikube addons enable ingress;
 
 kubectl apply -f https://raw.githubusercontent.com/cloudnative-pg/cloudnative-pg/release-1.20/releases/cnpg-1.20.2.yaml
 
@@ -34,3 +35,16 @@ kubectl get pods -A
 #kubectl port-forward svc/prometheus-community-kube-prometheus 9090
 
 ```
+
+```shell
+skaffold dev
+```
+
+```shell
+k get svc
+
+mk ip
+
+```
+
+

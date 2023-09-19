@@ -1,0 +1,18 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: cloudnativepg
+build:
+  artifacts:
+    - image: flask-pg
+      context: flask-pg/app
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+      - name: flask-pg
+        chartPath: flask-pg
+        valuesFiles:
+          - flask-pg/values.yaml
+        version: 0.1.0
