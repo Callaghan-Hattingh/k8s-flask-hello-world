@@ -42,6 +42,8 @@ spec:
               value: "postgres"
             - name: KC_DB_PASSWORD
               value: "password"
+            - name: KC_METRICS_ENABLED
+              value: "true"
           readinessProbe:
             httpGet:
               path: /keycloak/health/ready
