@@ -10,9 +10,11 @@ keycloak: [192.168.49.10](http://192.168.49.10/keycloak).
 ```shell
 minikube delete --all;
 minikube start;
+helm repo add cloudnative-pg https://cloudnative-pg.io/charts/
 helm repo add metallb https://metallb.github.io/metallb
 helm repo add traefik https://traefik.github.io/charts
 helm repo update
+helm upgrade --install cloudnative-pg cloudnative-pg/cloudnative-pg --version 0.18.2
 helm upgrade --install metallb metallb/metallb --create-namespace --namespace metallb-system --wait --version 0.13.11
 helm upgrade --install traefik traefik/traefik --version 24.0.0
 ```

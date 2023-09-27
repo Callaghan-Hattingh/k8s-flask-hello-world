@@ -34,6 +34,14 @@ spec:
               value: "true"
             - name: KC_CACHE
               value: "ispn"
+            - name: KC_DB
+              value: "postgres"
+            - name: KC_DB_URL
+              value: "jdbc:postgresql://keycloak-pg-rw:5432/postgres"
+            - name: KC_DB_USERNAME
+              value: "postgres"
+            - name: KC_DB_PASSWORD
+              value: "password"
           readinessProbe:
             httpGet:
               path: /keycloak/health/ready
