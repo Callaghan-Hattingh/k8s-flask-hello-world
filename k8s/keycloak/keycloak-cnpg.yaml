@@ -19,3 +19,5 @@ spec:
     name: keycloak-cnpg-super-user-secret
   storage:
     size: 1Gi
+  monitoring:
+    enablePodMonitor: true

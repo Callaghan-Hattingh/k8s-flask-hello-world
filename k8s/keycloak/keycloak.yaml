@@ -4,6 +4,10 @@ metadata:
   name: keycloak
   labels:
     app: keycloak
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/identity/metrics"
+    prometheus.io/port: "8080"
 spec:
   replicas: 1
   selector:
@@ -29,7 +33,7 @@ spec:
             - name: KC_PROXY
               value: "edge"
             - name: KC_HTTP_RELATIVE_PATH
-              value: "/keycloak"
+              value: "/identity"
             - name: KC_HEALTH_ENABLED
               value: "true"
             - name: KC_CACHE
